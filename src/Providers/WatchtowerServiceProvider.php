@@ -4,7 +4,7 @@ namespace MiPaquete\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class MiPaqueteServiceProvider extends ServiceProvider
+class WatchtowerServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
