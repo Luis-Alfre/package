@@ -1,6 +1,6 @@
 <?php
 
-namespace MiPaquete\Console;
+namespace Watchtower\Console;
 
 use Illuminate\Console\Command;
 

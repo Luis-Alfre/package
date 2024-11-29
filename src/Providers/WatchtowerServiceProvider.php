@@ -8,14 +8,14 @@ class WatchtowerServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/mipaquete.php', 'mipaquete');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/watchtower.php', 'watchtower');
     }
 
     public function boot(): void
     {
         // Configuración
         $this->publishes([
-            __DIR__ . '/../../config/mipaquete.php' => config_path('mipaquete.php'),
+            __DIR__ . '/../../config/watchtower.php' => config_path('watchtower.php'),
         ], 'config');
 
         // Rutas
@@ -25,27 +25,27 @@ class WatchtowerServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
         // Vistas
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'mipaquete');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'watchtower');
         $this->publishes([
-            __DIR__ . '/../../resources/views' => resource_path('views/vendor/mipaquete'),
+            __DIR__ . '/../../resources/views' => resource_path('views/vendor/watchtower'),
         ], 'views');
 
         // Traducciones
-        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'mipaquete');
+        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'watchtower');
         $this->publishes([
-            __DIR__ . '/../../resources/lang' => lang_path('vendor/mipaquete'),
+            __DIR__ . '/../../resources/lang' => lang_path('vendor/watchtower'),
         ], 'lang');
 
         // Comandos Artisan
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \MiPaquete\Console\InstallCommand::class,
+                \Watchtower\Console\InstallCommand::class,
             ]);
         }
 
         // Recursos Públicos
         $this->publishes([
-            __DIR__ . '/../../public' => public_path('vendor/mipaquete'),
+            __DIR__ . '/../../public' => public_path('vendor/watchtower'),
         ], 'public');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace MiPaquete\Http\Controllers;
+namespace Watchtower\Http\Controllers;
 
 use Illuminate\Http\Request;
 
