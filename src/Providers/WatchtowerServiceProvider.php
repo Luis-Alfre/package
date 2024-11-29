@@ -3,6 +3,7 @@
 namespace Watchtower\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Filament\Facades\Filament;
 
 class WatchtowerServiceProvider extends ServiceProvider
 {
@@ -13,6 +14,11 @@ class WatchtowerServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+          // Registrar las rutas de Filament
+          Filament::registerResources([
+            \Watchtower\Resources\DataResource::class,
+        ]);
+
         // Configuración
         $this->publishes([
             __DIR__ . '/../../config/watchtower.php' => config_path('watchtower.php'),
