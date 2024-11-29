@@ -19,29 +19,10 @@ class WatchtowerServiceProvider extends ServiceProvider
         ], 'config');
 
         // Rutas
-        $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
 
         // Migraciones
-        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
-
-        // Vistas
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'watchtower');
-        $this->publishes([
-            __DIR__ . '/../../resources/views' => resource_path('views/vendor/watchtower'),
-        ], 'views');
-
-        // Traducciones
-        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'watchtower');
-        $this->publishes([
-            __DIR__ . '/../../resources/lang' => lang_path('vendor/watchtower'),
-        ], 'lang');
-
-        // Comandos Artisan
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                \Watchtower\Console\InstallCommand::class,
-            ]);
-        }
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
         // Recursos Públicos
         $this->publishes([
