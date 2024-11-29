@@ -17,5 +17,6 @@
                 "Watchtower\\Providers\\WatchtowerServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
