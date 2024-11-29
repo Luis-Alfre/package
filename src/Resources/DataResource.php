@@ -4,12 +4,13 @@
 namespace Watchtower\Resources;
 
 use Filament\Resources\Resource;
-use Filament\Resources\Form;
-use Filament\Resources\Table;
 use Filament\Tables\Columns\TextColumn;
 use Watchtower\Models\DataModel;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Form;
+use Filament\Tables\Table;
+
 
 class DataResource extends Resource
 {
