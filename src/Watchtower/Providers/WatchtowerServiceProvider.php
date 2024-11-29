@@ -1,6 +1,6 @@
 <?php
 
-namespace MiPaquete\Providers;
+namespace Watchtower\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
