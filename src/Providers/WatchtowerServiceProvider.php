@@ -14,8 +14,8 @@ class WatchtowerServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-          // Registrar las rutas de Filament
-          Filament::registerResources([
+        // Registrar las rutas de Filament
+        Filament::registerResources([
             \Watchtower\Resources\DataResource::class,
         ]);
 
