@@ -10,6 +10,9 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Watchtower\Resources\DataResource\Pages\CreateData;
+use Watchtower\Resources\DataResource\Pages\ListData;
+use Watchtower\Resources\DataResource\Pages\EditData;
 
 
 class DataResource extends Resource
@@ -45,9 +48,9 @@ class DataResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListData::route('/'),
-            'create' => Pages\CreateData::route('/create'),
-            'edit' => Pages\EditData::route('/{record}/edit'),
+            'index' => ListData::route('/'),
+            'create' => CreateData::route('/create'),
+            'edit' => EditData::route('/{record}/edit'),
         ];
     }
 }

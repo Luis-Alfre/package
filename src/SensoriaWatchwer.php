@@ -7,9 +7,6 @@ use Filament\Panel;
 
 class SensoriaWatchwer implements Plugin
 {
-    use Concerns\CanCustomizeColumns;
-    use Concerns\CanLocalizePermissionLabels;
-    use Concerns\HasSimpleResourcePermissionView;
 
     public static function make(): static
     {
