@@ -3,7 +3,7 @@
 namespace Watchtower\Resources\DataResource\Pages;
 
 use Filament\Resources\Pages\EditRecord;
-use Watchtower\Filament\Resources\DataResource;
+use Watchtower\Resources\DataResource;
 
 class EditData extends EditRecord
 {

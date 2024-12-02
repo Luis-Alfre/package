@@ -10,6 +10,6 @@ use Illuminate\Database\Eloquent\Model;
 class DataModel extends Model
 {
     use HasFactory;
-
+    protected $table = 'watchtower';
     protected $fillable = ['name', 'data'];
 }

@@ -4,7 +4,7 @@
 namespace Watchtower\Resources\DataResource\Pages;
 
 use Filament\Pages\Actions;
-use Watchtower\Filament\Resources\DataResource;
+use Watchtower\Resources\DataResource;
 use Filament\Resources\Pages\ListRecords;
 
 class ListData extends ListRecords
